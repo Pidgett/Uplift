@@ -28,21 +28,27 @@
 #
 ### **Homepage**
 ---------------
-
+<img src="Home Page.png"
+     alt="Home Page Wireframe designed with Balsamiq. In a mockup of a browser window before a blue background, a search bar and list of businesses is on the left half of the screen alongside an image of a map with location markers to the right"
+     style="float: left; margin-right: 10px;" />
 #
 #
 ### **User Sign-Up**
 ----------------
-
+<img src="Sign-Up Page.png"
+     alt="Sign-up / Login Page Wireframe designed with Balsamiq. In a mockup of a browser window before a blue background is a form with name, email, and passwords fields. A Google icon is at the bottom of the page to let users know they can sign up with their Google account."
+     style="float: left; margin-right: 10px;" />
 #
 #
 ### **Business Page Template**
 ----------------
-
+<img src="Business Page Template.png"
+     alt="Business Page Wireframe designed with Balsamiq. In a mockup of a browser window before a blue background, a palceholder image of a building near directional signs rests about a table of user comments. Below that is a large text field for users to add comments."
+     style="float: left; margin-right: 10px;" />
 #
 #
 ### **User Profile Template**
 ----------------
 
-#
+#*Under Construction*
 #
