@@ -1,4 +1,6 @@
-node_modules
 README 2.md
-.env
 .DS_Store
+.data/
+.env
+.envrc
+node_modules/
