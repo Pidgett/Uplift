@@ -1,6 +1,8 @@
 import * as React from "react";
 
 import * as apiClient from "./apiClient";
+import ListBusinesses from "../src/components/ListBusinesses";
+import AddBusiness from "../src/components/AddBusiness";
 
 const App = () => {
   const [tasks, setTasks] = React.useState([]);
@@ -15,6 +17,9 @@ const App = () => {
     <main className="App">
       <TaskList tasks={tasks} />
       <AddTask loadTasks={loadTasks} />
+
+      <ListBusinesses />
+      <AddBusiness />
     </main>
   );
 };

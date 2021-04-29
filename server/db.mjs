@@ -3,12 +3,12 @@ import pgp from "pg-promise";
 
 const db = initDb();
 
-export const getTasks = async () => await db.any("SELECT * FROM tasks");
+export const getBusinesses = async () => await db.any("SELECT * FROM businesses");
 
-export const addTask = async (name) =>
+export const addBusiness = async (name, location, liftType) =>
   (
-    await db.any("INSERT INTO tasks(name) VALUES($1) RETURNING id, name", [
-      name,
+    await db.any("INSERT INTO businesses(name, location, liftType) VALUES($1, $2, $3) RETURNING id, name, location, liftType", [
+      name, location, liftType,
     ])
   )[0];
 
@@ -18,7 +18,7 @@ function initDb() {
   if (process.env.DATABASE_URL === undefined) {
     dotenv.config({ path: "../.env" });
     connection = {
-      user: "postgres",
+      user: "tpl8_2021H1",
       database: process.env.POSTGRES_DB,
       password: process.env.POSTGRES_PASSWORD,
       port: 5442,
