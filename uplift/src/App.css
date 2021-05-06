@@ -1,0 +1,60 @@
+* {
+  border: solid purple;
+}
+.navbar {
+  border: dotted red;
+  background-color: antiquewhite;
+  width: 100%;
+  position: fixed;
+  top: 1;
+}
+.navbar ul {
+  list-style-type: none;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: rgb(15, 14, 14);
+  text-align: center;
+  padding: 10px, 10px;
+}
+
+#logo {
+  position: fixed;
+  top: 0;
+  display: block;
+  justify-content: left;
+}
+.navbar button {
+  display: block;
+  justify-content: right;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #0db0c2ec;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.landing-container {
+  display: inline-grid;
+  color: aquamarine;
+}
+.landing-grid {
+  display: grid;
+}
+
+.button:hover {
+  text-decoration: underline;
+  background-color: rgb(45, 45, 138);
+  color: azure;
+}
