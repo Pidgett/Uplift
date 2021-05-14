@@ -6,21 +6,21 @@ import * as db from "./db.mjs";
 const app = express();
 const port = process.env.PORT || 4000;
 
-const tasks = express.Router();
+const businesses = express.Router();
 
-tasks.get("/", async (request, response) => {
-  const tasks = await db.getTasks();
-  response.json(tasks);
+businesses.get("/", async (request, response) => {
+  const businesses = await db.getBusinesses();
+  response.json(businesses);
 });
 
-tasks.use(express.json());
-tasks.post("/", async (request, response) => {
+businesses.use(express.json());
+businesses.post("/", async (request, response) => {
   const { name } = request.body;
-  const task = await db.addTask(name);
-  response.status(201).json(task);
+  const business = await db.addBusiness(name, city, country, lift);
+  response.status(201).json(business);
 });
 
-app.use("/api/tasks", tasks);
+app.use("/api/businesses", businesses);
 
 process.env?.SERVE_REACT?.toLowerCase() === "true" &&
   app.use(
