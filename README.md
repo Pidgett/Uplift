@@ -1,54 +1,70 @@
-# Uplift Web-App Final
----------------
-#
-#
-##### Uplift is a web-app accessibility utility developed using Postgres, Express, React, Node.js, and Jade.
-##### The goal of the tool is to allow users to crowdsource data about additional assistive technologies offered by some businesses that aren't easily searchable for on other business/service-finding platforms.
+# Getting Started with Create React App
 
-### -> [Presentation](https://docs.google.com/presentation/d/1AnS7UKOgewBZthfMQ196KKfspe2wqifWNJBRXldT-3g/edit#slide=id.g723630543_3_0) <-
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-### Apis 
----------------
-#
-#
-##### To source the majority of the data in the first build of the project I'll be relying on User input, but have so far been able to provide some initial data for hotel chains in other countries that provide Hoyer Lifts on-site for guests who cannot transfer out of their chairs on their own. 
-#
-### Apis that will be utilized during the first build:
-##### 1. **Auth0** for user sign-up and log-in
-##### 2. **Mapbox: Static Images** for individual business page maps
-##### 3. **Mapbox: Static Tiles** where multiple businesses appear close to each other in intial search
-#
-#
-#
-### Wireframes
---------------
-##### These are a few wireframes of page templates I want to use after deploying the app
-#
-#
-### **Homepage**
----------------
-<img src="Home Page.png"
-     alt="Home Page Wireframe designed with Balsamiq. In a mockup of a browser window before a blue background, a search bar and list of businesses is on the left half of the screen alongside an image of a map with location markers to the right"
-     style="float: left; margin-right: 10px;" />
-#
-#
-### **User Sign-Up**
-----------------
-<img src="Sign-Up Page.png"
-     alt="Sign-up / Login Page Wireframe designed with Balsamiq. In a mockup of a browser window before a blue background is a form with name, email, and passwords fields. A Google icon is at the bottom of the page to let users know they can sign up with their Google account."
-     style="float: left; margin-right: 10px;" />
-#
-#
-### **Business Page Template**
-----------------
-<img src="Business Page Template.png"
-     alt="Business Page Wireframe designed with Balsamiq. In a mockup of a browser window before a blue background, a palceholder image of a building near directional signs rests about a table of user comments. Below that is a large text field for users to add comments."
-     style="float: left; margin-right: 10px;" />
-#
-#
-### **User Profile Template**
-----------------
+In the project directory, you can run:
 
-# *Under Construction*
-#
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
