@@ -22,7 +22,7 @@ const AddListing = () => {
       <h4>Add Listing</h4>
       <form className="new">
         <div className="BusinessType">
-          <label for="Business Type">Business Type</label>
+          <label htmlFor="Business Type">Business Type</label>
           <select id="Business Type">
             <option value="">Choose One</option>
             <option value="Hotel">Hotel</option>

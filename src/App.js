@@ -1,4 +1,7 @@
 import "./App.css";
+import createAuth0Client from "@auth0/auth0-spa-js";
+
+import Navbar from "../src/components/Navbar";
 import ListBusinesses from "../src/components/ListBusinesses";
 import AddListing from "../src/components/AddBusinesses";
 import { Fragment } from "react";
@@ -7,17 +10,7 @@ function App() {
   return (
     <Fragment>
       <div className="navbar">
-        <ul>
-          <li>
-            <a href="#">###</a>
-          </li>
-          <li>
-            <a href="#">###</a>
-          </li>
-          <li>
-            <a href="#">###</a>
-          </li>
-        </ul>
+        <Navbar />
       </div>
 
       <div className="listings">
