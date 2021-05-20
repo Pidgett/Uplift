@@ -1,14 +1,22 @@
 .navbar {
-  flex-direction: row;
-  background-color: rgb(244, 240, 235);
+  background-image: url("../src/images/navbg.jpg");
+}
+
+.navbar-brand img {
+  display: inline-block;
+  align-self: auto;
+  margin-right: 10px;
 }
 
 #brandname {
-  justify-content: center;
-  padding-top: 20px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: inline-block;
+  align-content: space-between;
   font-size: xx-large;
+}
+
+.usrbuttons {
+  justify-self: end;
+  float: right;
 }
 
 .App-header {
