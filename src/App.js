@@ -12,14 +12,42 @@ function App() {
       <div className="navbar">
         <Navbar />
       </div>
-
       <div className="listings">
         <ListBusinesses />
       </div>
-
       <div className="addlisting">
         <AddListing />
       </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>test <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      test
     </Fragment>
   );
 }
