@@ -1,23 +1,44 @@
-import React, { useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 
 const QuickSearch = () => {
+  const [searchBy, setSearchBy] = useState("");
+
   const [bType, setBType] = useState("");
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
   const [location, setLocation] = useState("");
+  const [lift, setLift] = useState("");
+
+  const [param1, setParam1] = useState("");
+  const [param2, setParam2] = useState("");
+
+  function search({ props }) {
+    setSearchBy({ props });
+    console.log({ searchBy });
+  }
 
   return (
-    <form>
-      <h4>Select *Business Type</h4>
-      <select name="Business Type" id="businessType">
-        <option value="Hotels">Hotels</option>
-        <option value="Museums">Museums</option>
-        <option value="Optometry">Optometry</option>
-        <option value="Dentistry">Dentistry</option>
-        <option value="National Parks">National Parks</option>
-        <option value="Beaches">Beaches</option>
-      </select>
-    </form>
+    <Fragment>
+      <h4>Search By</h4>
+
+      <form>
+        <select name="Main Search" id="firstQuery">
+          <option value="bType" onChange={QuickSearch}>
+            Business Type
+          </option>
+          <option value="city" onChange={QuickSearch}>
+            City
+          </option>
+          <option value="country" onChange={QuickSearch}>
+            Country
+          </option>
+          <option value="location" onChange={QuickSearch}>
+            Dentistry
+          </option>
+        </select>
+      </form>
+      <br></br>
+    </Fragment>
   );
 };
 
