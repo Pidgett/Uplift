@@ -1,4 +1,6 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect, useMemo } from "react";
+
+import TemplateLink from "../components/BusinessPage/TemplateLink";
 
 const ListBusinesses = () => {
   const [business, setBusiness] = useState([]);
@@ -10,6 +12,9 @@ const ListBusinesses = () => {
 
       console.log(jsonData);
       setBusiness(jsonData);
+      useEffect(() => {
+        useMemo(() => business, []);
+      });
       //setBusiness(jsonData);
     } catch (error) {
       console.error(error.message);
@@ -42,7 +47,9 @@ const ListBusinesses = () => {
       </tr> */}
           {business.map((listing) => (
             <tr>
-              <td>{listing.bname}</td>
+              <td>
+                <button className="details">{listing.bname}</button>
+              </td>
               <td>{listing.city}</td>
               <td>{listing.country}</td>
               <td>{listing.lift ? "✅" : "❎"}</td>
