@@ -50,18 +50,27 @@ app.get("/businesses/:bType", async (req, res) => {
 
 //Update Listing
 
-/*app.put("/todos/:id", async (req, res) => {
-    try {
-        const { id } = req.params;
-        const { name, bType, city, state, zipCode, country, lift, liftType, elevator, valet, publicTransit } = req.body;
-        const updateBusiness = await pool.query(
-            "UPDATE businesses SET"
-        )
-    } catch (error) { 
-        console.error(error.message);
-    }
-})
-*/
+app.put("/todos/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const {
+      name,
+      bType,
+      city,
+      state,
+      zipCode,
+      country,
+      lift,
+      liftType,
+      elevator,
+      valet,
+      publicTransit,
+    } = req.body;
+    const updateBusiness = await pool.query("UPDATE businesses SET");
+  } catch (error) {
+    console.error(error.message);
+  }
+});
 
 //Delete Business
 app.delete("/businesses/:id", async (req, res) => {
