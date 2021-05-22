@@ -14,6 +14,10 @@ function App() {
         <Navbar />
       </div>
 
+      <div className="search">
+        <Search />
+      </div>
+
       <div className="listings">
         <ListBusinesses />
       </div>
