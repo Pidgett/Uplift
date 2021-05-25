@@ -1,44 +1,143 @@
 .navbar {
-  background-image: url("../src/images/navbg.jpg");
+  background-color: whitesmoke;
+  height: 155px;
+  position: relative;
+  width: 100%;
 }
 
 .navbar-brand img {
-  display: inline-block;
+  display: inline;
   align-self: auto;
+  margin-top: 10px;
   margin-right: 10px;
+  height: 100px;
+  width: 100px;
+  border: 2px solid;
+  border-radius: 60px;
 }
 
 #brandname {
+  margin-top: 50px;
   display: inline-block;
   align-content: space-between;
   font-size: xx-large;
 }
 
+.profImg img {
+  display: inline;
+  float: right;
+  width: 80px;
+  height: 80px;
+  border-radius: 60%;
+  border: 2px solid;
+}
+
+.welcome {
+  display: flex;
+  margin-top: 45px;
+}
+.signupbtn {
+  margin-top: 135px;
+  margin-right: 20px;
+  color: teal;
+}
+
+.signupbtn:hover {
+  text-decoration: underline;
+  color: whitesmoke;
+  background-color: teal;
+}
+
+.loginbtn {
+  display: flex;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: teal;
+}
+
+.loginbtn:hover {
+  text-decoration: underline;
+  color: whitesmoke;
+  background-color: teal;
+  border: solid 2px rgb(212, 159, 59);
+}
+
+.loginbtn a:hover {
+  color: whitesmoke;
+}
+
+.logoutbtn {
+  margin-top: 35px;
+  margin-left: 190px;
+  color: teal;
+}
+
+.logoutbtn:hover {
+  text-decoration: underline;
+  color: whitesmoke;
+  background-color: teal;
+}
+
+.Banner {
+  height: 25%px;
+  width: 100%;
+  display: flex;
+}
+.businessDetails {
+  list-style-type: none;
+}
+
 .usrbuttons {
   justify-self: end;
   float: right;
+  color: teal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.addListing label {
+  color: black;
+  font-size: large;
+  align-items: left;
+  display: table-cell;
+}
+.addListing button {
+  background-color: rgba(48, 100, 245, 0.666);
+  width: 200px;
+  display: table-cell;
+  align-items: center;
+}
+.addListing {
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.addListing form {
+  display: grid;
+
+  align-content: space-between;
+}
+.addListing p {
+  display: table-row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addListing label {
+  align-items: right;
+}
+
+.addListing select {
+  display: table-cell;
+  align-items: left;
+}
+
+.addListing input {
+  margin-left: 5px;
+  display: table-cell;
+  margin-right: 5px;
+}
+#liftRadio {
+  display: grid;
+  align-items: center;
 }

@@ -12,9 +12,7 @@ const ListBusinesses = () => {
 
       console.log(jsonData);
       setBusiness(jsonData);
-      useEffect(() => {
-        useMemo(() => business, []);
-      });
+
       //setBusiness(jsonData);
     } catch (error) {
       console.error(error.message);
@@ -45,16 +43,35 @@ const ListBusinesses = () => {
         <td>Brazil</td>
         <td>True</td>
       </tr> */}
-          {business.map((listing) => (
-            <tr>
-              <td>
-                <button className="details">{listing.bname}</button>
-              </td>
-              <td>{listing.city}</td>
-              <td>{listing.country}</td>
-              <td>{listing.lift ? "✅" : "❎"}</td>
-            </tr>
-          ))}
+          {business.map(
+            (listing) => (
+              console.log(listing.id),
+              (
+                <tr>
+                  <td>
+                    <li key={listing.id} className="businessDetails">
+                      <button className="details">{listing.bname}</button>
+                    </li>
+                  </td>
+                  <td>
+                    <li key={listing.id} className="businessDetails">
+                      {listing.city}
+                    </li>
+                  </td>
+                  <td>
+                    <li key={listing.id} className="businessDetails">
+                      {listing.country}
+                    </li>
+                  </td>
+                  <td>
+                    <li key={listing.id} className="businessDetails">
+                      {listing.lift ? <h3>✓</h3> : <h3>✘</h3>}
+                    </li>
+                  </td>
+                </tr>
+              )
+            )
+          )}
         </tbody>
       </table>
     </Fragment>

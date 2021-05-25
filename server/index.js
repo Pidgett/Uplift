@@ -20,10 +20,10 @@ app.get("/businesses", async (req, res) => {
 //Add Businesses
 app.post("/businesses", async (req, res) => {
   try {
-    const { name, bType, city, state, zipCode, lift } = req.body;
+    const { bname, btype, city, country, lift } = req.body;
     const newBusiness = await pool.query(
-      "INSERT INTO businesses (name, bType, city, state, zipCode, lift) VALUES($1, $2, $3, $4, $5, $6) RETURNING *",
-      [name, bType, city, state, zipCode, lift]
+      "INSERT INTO businesses (bname, btype, city, country, lift) VALUES($1, $2, $3, $4, $5) RETURNING *",
+      [bname, btype, city, country, lift]
     );
 
     console.log(req.body);
@@ -35,12 +35,53 @@ app.post("/businesses", async (req, res) => {
 
 //Search Businesses by Type
 
-app.get("/businesses/:bType", async (req, res) => {
+app.get("/businesses/:btype/:%bname%", async (req, res) => {
   try {
-    const { bType } = req.params;
+    const { btype, bname } = req.params;
     const business = await pool.query(
-      "SELECT * FROM businesses WHERE bType = $1",
-      [bType]
+      "SELECT * FROM businesses WHERE btype = $1 AND WHERE bname LIKE $2",
+      [btype, bname]
+    );
+    console.log(req.params);
+  } catch (error) {
+    console.error(error.message);
+  }
+});
+
+//Search Businesses by City
+
+app.get("/businesses/:city", async (req, res) => {
+  try {
+    const { city } = req.params;
+    const business = await pool.query(
+      "SELECT * FROM businesses WHERE city = $1",
+      [city]
+    );
+    console.log(req.params);
+  } catch (error) {
+    console.error(error.message);
+  }
+}); //Search Businesses by Country
+
+app.get("/businesses/:country", async (req, res) => {
+  try {
+    const { country } = req.params;
+    const business = await pool.query(
+      "SELECT * FROM businesses WHERE country = $1",
+      [country]
+    );
+    console.log(req.params);
+  } catch (error) {
+    console.error(error.message);
+  }
+}); //Search Businesses by Name
+
+app.get("/businesses/:bName", async (req, res) => {
+  try {
+    const { bName } = req.params;
+    const business = await pool.query(
+      "SELECT * FROM businesses WHERE bName = $1",
+      [bName]
     );
     console.log(req.params);
   } catch (error) {
@@ -50,7 +91,7 @@ app.get("/businesses/:bType", async (req, res) => {
 
 //Update Listing
 
-app.put("/todos/:id", async (req, res) => {
+app.put("/businesses/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const {

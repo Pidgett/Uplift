@@ -1,43 +1,60 @@
 import React, { Fragment, useState, useEffect } from "react";
 
 const QuickSearch = () => {
-  const [searchBy, setSearchBy] = useState("");
-
-  const [bType, setBType] = useState("");
-  const [city, setCity] = useState("");
-  const [country, setCountry] = useState("");
-  const [location, setLocation] = useState("");
-  const [lift, setLift] = useState("");
-
   const [param1, setParam1] = useState("");
   const [param2, setParam2] = useState("");
 
-  function search({ props }) {
-    setSearchBy({ props });
-    console.log({ searchBy });
-  }
+  const [bname, setBName] = useState("");
+  const [btype, setBType] = useState("");
+  const [city, setCity] = useState("");
+  const [country, setCountry] = useState("");
+
+  const [business, setBusiness] = useState([]);
+
+  /*const onSubmitSearch = () => {
+
+    if ({ btype } === "") {
+      try {
+        const response = await fetch("http://localhost:5000/businesses");
+        const jsonData = await response.json();
+
+        console.log(jsonData);
+        setBusiness(jsonData);
+      } catch (error) {
+        console.error(error.message);
+      }
+    } else {
+      try {
+        const response = await fetch("http://localhost:5000/businesses/:btype/%bname%");
+        const jsonData = await response.json();
+
+        console.log(jsonData);
+        setBusiness(jsonData);
+      } catch (error) {
+        console.error(error.message);
+      }
+    
+
+    console.log({ business })
+    reut;
+  };*/
 
   return (
     <Fragment>
-      <h4>Search By</h4>
-
-      <form>
-        <select name="Main Search" id="firstQuery">
-          <option value="bType" onChange={QuickSearch}>
-            Business Type
-          </option>
-          <option value="city" onChange={QuickSearch}>
-            City
-          </option>
-          <option value="country" onChange={QuickSearch}>
-            Country
-          </option>
-          <option value="location" onChange={QuickSearch}>
-            Dentistry
-          </option>
+      <form className="searchbar">
+        <h4>Select Business Type</h4>
+        <select
+          className="businesstypes"
+          onChange={(e) => setBType(e.target.value)}
+        >
+          <option value="Hotel">Hotels</option>
+          <option value="Medical">Dentistry</option>
+          <option value="Tourism">Optometry</option>
         </select>
+        <br></br>
+        Business Name
+        <input type="text" onChange={(e) => setBName(e.target.value)} />
       </form>
-      <br></br>
     </Fragment>
   );
 };

@@ -10,6 +10,7 @@ ReactDOM.render(
     domain={process.env.REACT_APP_AUTH_DOMAIN}
     clientId={process.env.REACT_APP_AUTH_CLIENTID}
     redirectUri={window.location.origin}
+    screen_hint="signup"
   >
     <React.StrictMode>
       <App />
