@@ -1,10 +1,9 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState} from "react";
 
 const AddListing = () => {
   const [bname, setBName] = useState("");
   const [btype, setBType] = useState("");
   const [city, setCity] = useState("");
-  const [zipCode, setZipCode] = useState("");
   const [country, setCountry] = useState("");
   const [lift, setLift] = useState("");
 

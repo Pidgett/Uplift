@@ -35,7 +35,7 @@ app.post("/businesses", async (req, res) => {
 
 //Search Businesses by Type
 
-app.get("/businesses/:btype/:%bname%", async (req, res) => {
+app.get("/businesses/:btype/:bname", async (req, res) => {
   try {
     const { btype, bname } = req.params;
     const business = await pool.query(

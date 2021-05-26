@@ -1,5 +1,4 @@
 import "./App.css";
-import createAuth0Client from "@auth0/auth0-spa-js";
 
 import Navbar from "../src/components/Navbar";
 import Banner from "../src/components/Banner";
@@ -25,9 +24,7 @@ function App() {
         <div className="listings">
           <Search />
         </div>
-        <div className="listings">
-          <ListBusinesses />
-        </div>
+        
       </Fragment>
     );
   } else {

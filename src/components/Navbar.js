@@ -1,15 +1,13 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState} from "react";
 import logo from "../images/logo.jpg";
 
 import LoginButton from "../components/LoginButton";
 import LogoutButton from "../components/LogoutButton";
-import SignupButton from "../components/Signup";
 import Profile from "../components/Profile";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
-  const [profile, setProfile] = useState([]);
-  const [favorites, setFavorites] = useState([]);
+  
   const { isAuthenticated } = useAuth0();
 
   if (isAuthenticated) {
@@ -42,7 +40,7 @@ const Navbar = () => {
     return (
       <Fragment>
         <nav className="navbar" height="10">
-          <a className="navbar-brand" href="http://localhost:3000">
+          <a className="navbar-brand" href="https://upliftt.herokuapp.com/">
             {
               <img
                 src={logo}
