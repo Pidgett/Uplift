@@ -45,7 +45,7 @@ const QuickSearch = () => {
         <h4>Select Business Type</h4>
         <select
           className="businesstypes"
-          onChange={(e) => setBType(e.target.value)}
+          onChange={(e) => setBType(e.target.value), console.log({btype})}
         >
           <option value="Hotel">Hotels</option>
           <option value="Medical">Dentistry</option>

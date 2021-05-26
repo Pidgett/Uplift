@@ -1,7 +1,5 @@
 import React, { Fragment, useState, useEffect, useMemo } from "react";
 
-import TemplateLink from "../components/BusinessPage/TemplateLink";
-
 const ListBusinesses = () => {
   const [business, setBusiness] = useState([]);
 
