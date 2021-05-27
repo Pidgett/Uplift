@@ -3,7 +3,7 @@
 ---------------
 #
 #
-##### Uplift is a web-app accessibility utility developed using Postgres, Express, React, Node.js, and Jade.
+##### Uplift is a web-app accessibility utility developed using Postgres, Express, React, and Node.js.
 ##### The goal of the tool is to allow users to crowdsource data about additional assistive technologies offered by some businesses that aren't easily searchable for on other business/service-finding platforms.
 
 ### -> [Presentation](https://docs.google.com/presentation/d/1AnS7UKOgewBZthfMQ196KKfspe2wqifWNJBRXldT-3g/edit#slide=id.g723630543_3_0) <-
