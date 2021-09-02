@@ -35,14 +35,32 @@ app.post("/businesses", async (req, res) => {
 
 //Search Businesses by Type
 
-app.get("/businesses/:btype/:bname", async (req, res) => {
+app.get("/businesses/:btype", async (req, res) => {
+
   try {
-    const { btype, bname } = req.params;
-    const business = await pool.query(
-      "SELECT * FROM businesses WHERE btype = $1 AND WHERE bname LIKE $2",
+    const {btype} = req.params;
+
+    const businessesType = await pool.query(
+      "SELECT * FROM businesses WHERE businesses_btype = $1",
+      [btype]
+    );
+    res.json(businessesType.rows[0]);
+    console.log("Business Type:",req.params);
+  } catch (error) {
+    console.error(error.message);
+  }
+});
+
+app.get("/businesses/btype/:bname", async (req, res) => {
+  try {
+    const { btype, bname } = req.params.bname;
+    const businessesTypeName = await pool.query(
+      "SELECT * FROM businesses WHERE businesses_btype = $1 AND WHERE businesses_bname LIKE $2",
       [btype, bname]
     );
-    console.log(req.params);
+    res.json(businessesTypeName.rows);
+
+    console.log("Business Type and Name:", req.params);
   } catch (error) {
     console.error(error.message);
   }
@@ -52,12 +70,14 @@ app.get("/businesses/:btype/:bname", async (req, res) => {
 
 app.get("/businesses/:city", async (req, res) => {
   try {
-    const { city } = req.params;
-    const business = await pool.query(
-      "SELECT * FROM businesses WHERE city = $1",
+    const { city } = req.params.city;
+    const businessesCity = await pool.query(
+      "SELECT * FROM businesses WHERE businesses_city = $1",
       [city]
     );
-    console.log(req.params);
+    res.json(businessesCity.rows);
+
+    console.log("City:", req.params);
   } catch (error) {
     console.error(error.message);
   }
@@ -65,25 +85,29 @@ app.get("/businesses/:city", async (req, res) => {
 
 app.get("/businesses/:country", async (req, res) => {
   try {
-    const { country } = req.params;
-    const business = await pool.query(
-      "SELECT * FROM businesses WHERE country = $1",
+    const { country } = req.params.country;
+    const businessesCountry = await pool.query(
+      "SELECT * FROM businesses WHERE businesses_country = $1",
       [country]
     );
-    console.log(req.params);
+    res.json(businessesCountry.rows);
+
+    console.log("Country:", req.params);
   } catch (error) {
     console.error(error.message);
   }
 }); //Search Businesses by Name
 
-app.get("/businesses/:bName", async (req, res) => {
+app.get("/businesses/:bname", async (req, res) => {
   try {
-    const { bName } = req.params;
-    const business = await pool.query(
-      "SELECT * FROM businesses WHERE bName = $1",
-      [bName]
+    const { bname } = req.params.bname;
+    const businessesName = await pool.query(
+      "SELECT * FROM businesses WHERE businesses_bname LIKE $1",
+      [bname]
     );
-    console.log(req.params);
+    res.json(businessesName.rows);
+
+    console.log("Business Name:", req.params);
   } catch (error) {
     console.error(error.message);
   }
@@ -95,8 +119,8 @@ app.put("/businesses/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const {
-      name,
-      bType,
+      bname,
+      btype,
       city,
       state,
       zipCode,
